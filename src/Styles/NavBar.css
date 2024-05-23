@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.navbar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(0deg, #02304767 0%, #0230472f 100%);
+  padding:  1rem 1rem 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+.navbar-links a::before{
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--PrimaryColor);
+  margin: 1px 0;
+  transform: scale(0,1);
+  transition: transform ease-in-out 250ms;
+} 
+
+.navbar-links a:hover::before{
+  transform: scale(1,1);
+} 
+
+.logo-hamburger{
+    display: flex;
+    align-items: center;
+}
+.navbar-logo {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 6rem 0.5rem 4rem;
+  background: linear-gradient(45deg,  var(--MainColor),var(--PrimaryColor)); 
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+
+  /* animation: logoAnimation 2000ms ease-in-out infinite; */
+}
+.navbar-logo p{
+
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--HeadingText);
+  animation: logoAnimation 3000ms ease-in-out infinite;
+}
+@keyframes logoAnimation {
+  0%, 100% {
+    color: #000000;
+    transform: scale(1);
+  }
+  50% {
+    color: var(--HeadingText);
+    transform: scale(1.1);
+  }
+}
+
+.navbar-links {
+  display: flex;
+  transition:transform 520ms ease-in-out;
+  overflow: hidden;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+ 
+  color: var(--HeadingText);
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.comp-icon{
+  width: 0;
+  height: 0;
+  position: absolute;
+  
+  /* opacity: 0; */
+}
+
+@media screen and (max-width: 760px) {
+  .navbar {
+    background-color: var(--MainColor);
+    padding:  1rem 0 1rem 1rem;
+ 
+  
+  }
+  .navbar-links {
+    width: 100%;
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+    text-align: center;
+    background: var(--MainColor);
+    background-image: linear-gradient(-45deg,var(--MainTrans-2),var(--MainColor)),url("../Assets/navbar-bckg.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    transform:scale(0,0);
+    transform-origin:  top;
+    transition:transform 520ms ease-in-out;
+  }
+
+  .navbar-links a{
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    font-style: normal;
+  } 
+
+  
+  .navbar-links a::before{
+    all: unset;
+  } 
+  
+  .navbar-links a:hover::before{
+    all: unset;
+    transform: scale(1,1);
+  } 
+  .logo-hamburger{
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.navbar-logo{
+  padding: 0.5rem 2rem 0.5rem 4rem;
+  background: linear-gradient(45deg, var(--PrimaryColor), var(--MainColor)); 
+  clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
+}
+
+  .navbar-links.open {
+    transform: scale(1);
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    border-top: 1px #004365  solid;
+    margin: 0;
+    padding: 1.2rem 0;
+  }
+  .last-li{
+    border-bottom: 1px  #004365 solid;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .icon {
+    color: var(--PrimaryColor); 
+    font-size: 1.5rem;
+  }
+
+  .nav-links a:hover {
+    color: #1589ff;
+  }
+
+  .comp-icon{
+    all: unset;
+    width: 7%;
+    padding-bottom:1.5rem ;
+    height: auto;
+    opacity: 1;
+  }
+}
