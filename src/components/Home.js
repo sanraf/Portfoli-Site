@@ -24,20 +24,20 @@ function Home() {
       <MobileMockup/>
       {/* <ImageViewer/> */}
       {/* <NavBar/> */}
-      <Hero/>
+      {/* <Hero/> */}
       {/* <CleanupHero/> */}
-      {/* <HeroSection/> */}
-      {/* <DesktopMockup/> */}
-      {/* <About/> */}
-      {/* <Skills/> */}
+      <HeroSection/>
+      <DesktopMockup/>
+      <About/>
+      <Skills/>
       {/* <Email/> */}
-      {/* <Project/> */}
+      <Project/>
       {/* <kkk/> */}
       {/* <Card/> */}
       {/* <NewCard/> */}
       {/* <ProjectDemo/> */}
-      {/* <Contact/> */}
-      {/* <AppFooter/> */}
+      <Contact/>
+      <AppFooter/>
     </div>
   )
 }
